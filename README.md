@@ -3,5 +3,5 @@
 In the /server directory:
 
 ### `mvn clean package`
-### `java -jar target/---.jar
+### `java -jar target/rest-service-0.0.1-SNAPSHOT.jar`
 
