@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  height: 580px;
+}
+
+.search-item {
+  width: 100%;
+  margin-bottom: 2%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.tree-item {
+  border-top-style: double;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 2%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-item {
+  border-left-style: double;
+  border-top-style: double;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 2%;
+  margin-right: 20px;
+  width: 70%;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
