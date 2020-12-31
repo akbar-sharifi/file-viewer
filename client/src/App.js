@@ -37,7 +37,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080')
+    fetch('http://localhost:8080?dir=tmp')
       .then(response => response.json())
       .then(data => this.setState({
         files: data,

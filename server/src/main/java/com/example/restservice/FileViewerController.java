@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FileViewerController {
 
-	private static final String DIR = "./tmp";
+	private static final String ROOT_DIR = "./";
 
 	@GetMapping("/")
-	public Map<String, String> greeting() throws IOException {
+	public Map<String, String> greeting(@RequestParam String dir) throws IOException {
 		Map<String, String> results = new HashMap<>();
-		List<Path> files = Files.find(Paths.get(DIR),
+		List<Path> files = Files.find(Paths.get(ROOT_DIR + dir),
 				Integer.MAX_VALUE,
 				(filePath, fileAttr) -> fileAttr.isRegularFile())
 				.collect(Collectors.toList());
