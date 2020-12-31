@@ -47,7 +47,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.data)
     return (
       <div class="container">
         <div class="search-item">
